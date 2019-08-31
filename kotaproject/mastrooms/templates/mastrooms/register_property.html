@@ -1,0 +1,229 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title> Register Property | Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/register_property.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/about_us_responsive.css' %}">
+{% endblock %}
+{% block nav %}
+<li class="active"><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{% block menu_nav %}
+<li class="menu_mm"><a href="{% url 'index' %}"></i> Home</a></li><hr>
+<li class="menu_mm"><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li><hr>
+{% endblock %}
+{% block content %}
+<div class="home">
+<div class="breadcrumbs_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="breadcrumbs">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li>Register Property</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</div>
+<!-- *********************************************Blog1******************************************************* -->
+<div class="blog">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<div class="blog_content">
+<div class="blog_title">Register Now</div>
+<p>Kota has been a major coaching hub of the country for competitive examination. Lakhs of students come to Kota for preparation each year.
+With such a huge number of students migrating each year, renting rooms can be a good source of income.<br/>We find a more valuable, less invasive way where room renting is a hassle free job without paying huge money for Brokers.
+</p>
+<p><a href="{% url 'instructions' %}"><button type="button" class="btn btn-outline-danger btn-lg">Register Property Now</button></a></p>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/register_property_kota.jpg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" ></div>
+</div>
+</div>
+</div>
+</div>
+<!--**********************************************Features*****************************************************-->
+<div class="features">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="section_title_container text-center">
+<div class="section_title">Why Mastrooms</div>
+</div>
+</div>
+</div>
+<div class="row features_row">
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/no_broker.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Forget Brokers</h3>
+<div class="feature_text"><p>No need to Pay High charges to Brokers.</p>
+</div>
+</div>
+</div>
+<!-- Features Item -->
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/register_property_ad_with_us.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Ad with Us</h3>
+<div class="feature_text"><p>Advertise your property to thousands of customers.</p></div>
+</div>
+</div>
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/register_property_save_money.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Save Money</h3>
+<div class="feature_text"><p>Why waste money on other modes of advertisements.</p></div>
+</div>
+</div>
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/register_property_save_your_time.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Save your Time</h3>
+<div class="feature_text"><p>No need to waste your time in search of Tenants.</p></div>
+</div>
+</div>
+
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/register_property_welcome_tenants.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Welcome Tenants</h3>
+<div class="feature_text"><p>Welcome Tenants with increased Rental Benefits.</p></div>
+</div>
+</div>
+<!-- Features Item -->
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/register_property_sit_back_and_relax.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Sit back &amp; Relax</h3>
+<div class="feature_text"><p>Booking will be much faster than ever before.</p></div>
+</div>
+</div>
+
+<!-- Features Item -->
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/register_property_profit_increased.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Profit Increased</h3>
+<div class="feature_text"><p>Profit will increase more than ever before.</p></div>
+</div>
+</div>
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/register_property_never_ending_benefits.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"  style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Never Ending Benefits</h3>
+<div class="feature_text"><p>You will receive never ending Benefits from Mastrooms.</p></div>
+</div>
+</div>
+
+</div>
+<hr>
+</div>
+</div>
+<!--**********************************************Blog2********************************************************-->
+<div class="blog">
+<div class="container">
+<div class="row">
+
+<!--<div class="col-lg-1"></div>
+Blog Content -->
+
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/register_property_technology.jpg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" ></div>
+</div>
+
+<div class="col-lg-7">
+<div class="blog_content">
+<div class="blog_title">A Blend of Innovation<br>with Technology </div>
+<p>Mastrooms is an Innovative step to solve the problem which is faced by Room Owners in almost every city.We are built using latest technology to deliver better and more efficient operations, management and services to our customers.</p>
+<br>
+<div class="blog_quote d-flex flex-row align-items-center justify-content-start">
+<!--<img src="images/q1.svg" alt=" Ques " style="width:40px;height:70px;">-->
+<div><i id="quotes" class="fas fa-quote-left"></i> &nbsp;&nbsp;&nbsp;Mastrooms beleives that if technology is used in utmost way, then it can create positive difference in the economic growth of People or Business. Mastrooms aims to be the driver of this change. &nbsp;&nbsp;&nbsp;<i id="quotes" class="fas fa-quote-right"></i></div>
+</div>
+</div>
+
+<!-- Comments -->
+
+</div>
+
+<!-- Blog Sidebar -->
+
+</div>
+</div>
+</div>
+<!--**********************************************Blog3*********************************************************-->
+<div class="blog">
+<div class="container">
+<div class="row">
+
+<!-- Blog Content -->
+<div class="col-lg-7">
+<div class="blog_content">
+<div class="blog_title">How to Register Property</div>
+<p>Registrating on Mastrooms is very simple. You can follow three simple steps to register yourself at Mastrooms.
+	<br>Step 1 : Visit www.mastrooms.com from your browser.
+	<br>Step 2 : Follow Register Property Page &amp; click on Register Property Now button to continue.
+	<br>Step 3 : Click images of your property, provide all details and send us.
+</p>
+</div>
+<!-- Comments -->
+
+</div>
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/register_property_steps.jpg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" ></div>
+</div>
+
+
+
+<!-- Blog Sidebar -->
+
+</div>
+</div>
+</div>
+<!--***********************************************Blog4********************************************************-->
+<div class="blog">
+<div class="container">
+<div class="row">
+
+<!--<div class="col-lg-1"></div>
+Blog Content -->
+
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/register_property_wow1.png' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" ></div>
+</div>
+
+<div class="col-lg-6">
+<div class="blog_content">
+<div class="blog_title">Mastrooms WOW Principle !</div>
+<p>We beleives in <strong>Why</strong> should <strong>Owner Work </strong>principle. Why should you have to describe your room manually, if we are ready to help you with this. Just send us the basic details of your property, and we will take care from here. We will describe your property the way, it needs to be described.</p>
+<p>For the first time in the history of Kota, an owner can upload property by using the his/her Whatsapp app or by just filling a simple registration form. Life is that much easy with us. To know more, refer our <a href="{% url 'faq' %}">FAQs section.</a></p>
+</div>
+
+<!-- Comments -->
+
+</div>
+
+<!-- Blog Sidebar -->
+
+</div>
+</div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/colorbox/jquery.colorbox-min.js' %}"></script>
+<script src="{% static 'mastrooms/js/room_detail.js' %}"></script>
+{% endblock %}

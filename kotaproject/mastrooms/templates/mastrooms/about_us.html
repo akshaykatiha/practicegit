@@ -1,0 +1,119 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title>About Us | Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/about_us.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/about_us_responsive.css' %}">
+{% endblock %}
+{% block nav %}
+<li><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li class="active"><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{% block content %}
+<div class="home">
+<div class="breadcrumbs_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="breadcrumbs">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li>About Us</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</div>
+<div class="blog">
+<div class="container">
+<div class="row">
+<!-- Blog Content -->
+<div class="col-lg-7">
+<div class="blog_content">
+<div class="blog_title">About Us</div>
+<p>At Mastrooms, we believe there is a better way to spend your money, rather than paying it to Brokers or Dealers. Questions below laid down the foundation of Mastrooms.</p>
+<div class="blog_quote d-flex flex-row align-items-center justify-content-start">
+<img src="{% static 'mastrooms/images/q1.svg' %}" onerror="this.style.display='None'" alt=" Ques-1 " style="width:40px;height:70px;">
+<div>Why searching for rooms in a city is tedious when there are thousands of rooms available ?</div>
+</div>
+<div class="blog_quote d-flex flex-row align-items-center justify-content-start">
+<img src="{% static 'mastrooms/images/q1.svg' %}" onerror="this.style.display='None'" alt=" Ques-2 " style="width:40px;height:70px;">
+<div>Why we still apply the same old methods to find the rooms, the way our ancenstors used to do ?</div>
+</div>
+<p>Tenants don’t know where to search for rooms, how to reach them, or even what to price them at. We find a more valuable, less invasive way where both Tenants and Owners share a platform to solve their mutual problem.</p>
+<p>Mastrooms provides a platform for both Tenants and Owners to locate properties of their interest. Our aim is to make room searching easy for Tenants hassle free without paying huge money for Brokers or property dealers.</p>
+</div>
+</div>
+<!-- Blog Sidebar -->
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/about_us_1.jpeg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" > </div>
+</div>
+</div>
+</div>
+</div>
+<div class="blog">
+<div class="container">
+<div class="row">
+
+<!--<div class="col-lg-1"></div>
+Blog Content -->
+
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/about_us_2.jpg' %}" onerror="this.style.display='None'" alt=" This image is shy in nature :) "></div>
+</div>
+
+<div class="col-lg-6">
+<div class="blog_content">
+<div class="blog_title">Don't be a stranger<br/>just say hello !</div>
+<p>We would love to here from you. If you have any suggestions, or complaints, feel free to drop your quries at :<br>
+<a href = "mailto:mail@mastrooms.com?">mail@mastrooms.com</a> or <a href = "mailto:mail@mastrooms.com?">mastrooms@gmail.com</a><br><br>Follow Us on :
+<a href="https://www.facebook.com/mastrooms/" target="_blank"><img src="{% static 'mastrooms/images/facebook.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:40px;height:40px;"></a> &nbsp;&nbsp;&nbsp;<a href="https://wa.me/+916395288267" target="_blank"><img src="{% static 'mastrooms/images/whatsapp.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:40px;height:40px;"></a> &nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/mastrooms/" target="_blank"><img src="{% static 'mastrooms/images/instagram.svg' %}" alt="This image is shy in nature :)" onerror="this.style.display='None'" style="width:40px;height:40px;"></a> &nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UCwccg85v1XufV-4jjd_9YcA" target="_blank"><img src="{% static 'mastrooms/images/youtube.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:40px;height:40px;"></a>
+</p>
+</div>
+
+<!-- Comments -->
+
+</div>
+
+<!-- Blog Sidebar -->
+
+</div>
+</div>
+</div>
+<div class="blog">
+<div class="container">
+<div class="row">
+
+<!-- Blog Content -->
+<div class="col-lg-7">
+<div class="blog_content">
+<div class="blog_title">Support Us</div>
+<p>It takes a lot of affords in terms of Time and Money to maintain this website. We leave no stone unturned to help you. Please donate us at <strong>mastrooms@upi</strong>.</p><!--or Patym us at 8909686866.</p>
+<p>
+<img src="{% static 'mastrooms/images/mastroomsupi.jpg' %}" alt="mastrooms@upi" style="width:200px;height:200px;"> or Patym us at &nbsp;&nbsp;
+<img src="{% static 'mastrooms/images/paytm1.jpg' %}" alt="Paytm" style="width:180px;height:180px;">
+-->
+</div>
+
+<!-- Comments -->
+
+</div>
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/about_us_3.png' %}" alt=" This image is shy in nature :) "></div>
+</div>
+
+<!-- Blog Sidebar -->
+
+</div>
+</div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'mastrooms/js/room_detail.js' %}"></script>
+{% endblock %}

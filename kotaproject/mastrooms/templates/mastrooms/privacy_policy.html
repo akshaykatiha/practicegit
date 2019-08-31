@@ -1,0 +1,125 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title>Privacy Ploicy | Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link href="{% static 'mastrooms/plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/terms_and_conditions.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/about_us_responsive.css' %}">
+{% endblock %}
+{% block nav%}
+<li><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{% block menu_nav %}
+<li class="menu_mm"><a href="{% url 'index' %}"></i> Home</a></li><hr id="hr2">
+<li class="menu_mm"><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li><hr id="hr2">
+<li class="menu_mm"><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li><hr id="hr2">
+{% endblock %}
+{% block content%}
+<div class="home">
+<div class="breadcrumbs_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="breadcrumbs">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li>Policy Policy</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</div>
+
+<!-- Course -->
+
+<div class="course">
+<div class="container">
+<div class="row">
+
+<!-- Course -->
+<div class="col-lg-12">
+
+<div class="course_container">
+
+<!-- Course Tabs -->
+<div class="course_tabs_container">
+<div class="tab_panels">
+
+<!-- Description -->
+<div class="tab_panel active">
+<div class="tab_panel_title">Privacy Policy :</div>
+<div class="tab_panel_content">
+<div class="tab_panel_text">
+<p>Please go through our Privacy Policy.</p>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Registration :</div>
+<div class="tab_panel_text">
+<p>In order to use Mastrooms,  user must first complete the registration form. During registration a user is required to give certain information (such as name,contact number and email address). This information is used to contact you about the products/services on this site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Orders :</div>
+<div class="tab_panel_text">
+<p>We request information from you to book rooms. For  booking from us, you must provide contact information (like name, contact number, other social accounts, email address, valid id and address) and financial information (like credit card number, expiration date). This information is used for booking purposes and to fill your orders. If we have trouble processing in booking, we'll use this information to contact you.</p>
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Cookies :</div>
+<div class="tab_panel_text">
+<p>We use "cookies" on this site. A cookie is a piece of data stored on a site visitor's hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance the experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site.
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Sharing :</div>
+<div class="tab_panel_text">
+<p>We share aggregated demographic information with our partners and advertisers. We can share your data like email id and contact number to our service providers, but only for your convention to help you at Mastrooms. We don't take any responsiblity for the missuse of that data.<br>
+And/or We are partner with another party to provide specific services. When the user signs up for these services, we will share names, or other contact information that is necessary for the third party to provide these services. These parties are not allowed to use personally identifiable information except for the purpose of providing these services.</p>
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Links :</div>
+<div class="tab_panel_text">
+<p>This website contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.</p>
+</div
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Surveys & Contests :</div>
+<div class="tab_panel_text">
+<p>From time-to-time our site requests information via surveys or contests. Participation in these surveys or contests is completely voluntary and you may choose whether or not to participate and therefore disclose this information. Information requested may include contact information (such as name and shipping address), and demographic information (such as zip code, age level). Contact information will be used to notify about services. Survey information will be used for purposes of monitoring or improving the use and satisfaction of Mastrooms.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Curriculum -->
+
+<!-- Reviews -->
+
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Course Sidebar -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'mastrooms/js/room_detail.js' %}"></script>
+{% endblock %}

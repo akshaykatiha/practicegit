@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-59ZXL4J');</script>
+<!-- End Google Tag Manager-->
+<meta name="google-site-verification" content="n53y7sTdrwcBB-CmYkMtnRCO35CZuVQe2u_hXEbzYjs" /> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131379310-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag()
+{
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'UA-131379310-1');
+</script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0">
+<meta name="google" content="notranslate"> <!--To save google from unnecessarily translating your page.-->
+{% block title %}{% endblock %}
+<meta name="description" content="Welcome to Kota. Find single or double, affordable rooms in Hostels or PGs without roaming here and there.Filter the room of your choice at Mastrooms.Enjoy a pleasant time in Kota with us.">
+<meta name="keywords" content=" Allen Kota | Hostels In Kota | PG in Kota | Hostels in Kota near Resonance | Kota Hostels | Girls PG in Kota, Boys PG in Kota, Rooms in kota near Allen, Rooms in kota near Resonance, Rooms in kota near Bansal, Rooms in kota near Vibrant, Rooms in kota near Motion, Rooms in kota near Carrer Point, Rooms in kota near Aakash, Single room for rent in Kota, Parents room in kota, Best Rooms in Kota, Best Hostels in Kota, Cheap PG in Kota, Cheap Hostels in Kota, PG in Talwandi Kota, PG in Vigyan Nagar Kota, PG in Kunhari Kota">
+<meta content="origin" name="referrer"> <!--Used for some SEO-->
+<link rel="canonical" href="https://www.mastrooms.com/" />
+<link rel="icon" href="{% static 'mastrooms/images/pi.png' %}">
+<link rel="apple-touch-icon" href="{% static 'mastrooms/images/pi.png' %}">
+<meta name="msapplication-square310x310logo" content="{% static 'mastrooms/images/pi.png' %}">
+<meta name="theme-color" content="#000000"><!--To color the tab area in android phones.-->
+<meta name="apple-mobile-web-app-status-bar-style" content="red"><!--To color the tab area in apple phones.-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="full-screen" content="yes">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Nunito|Open+Sans+Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link type="text/css" rel="stylesheet" href="{% static 'mastrooms/css/base.css' %}">
+{% block css %}
+{% endblock %}
+</head>
+<body>
+<div class="super_container">
+<header class="header">
+<div class="top_bar">
+<div class="top_bar_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+<ul class="top_bar_contact_list">
+<li><div class="question">Have any questions ?</div></li>
+<li>
+<i class="fab fa-whatsapp" style="color:rgb(34, 238, 34);"></i>
+<div>+916395288267 , +917985385064</div>
+</li>
+<li>
+<i class="far fa-envelope" style="color: red;"></i>
+<div>mail@mastrooms.com</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>				
+</div>
+<div class="header_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="header_content d-flex flex-row align-items-center justify-content-start">
+<div class="logo_container">
+<a href="{% url 'index' %}">
+<div class="logo_text"><img src="{% static 'mastrooms/images/pi_header_symbol.svg' %}" style="width:40px;height:40px;"></div>
+</a>
+</div>
+<nav class="main_nav_contaner ml-auto">
+<ul class="main_nav">
+{% block nav %}
+{% endblock %}
+</ul>
+<div class="hamburger menu_mm">
+<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</header>
+<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+<nav class="menu_nav">
+<ul class="menu_mm">
+<li class="menu_mm"><a href="{% url 'index' %}"></i> Home</a></li><hr>
+<li class="menu_mm"><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li><hr>
+<li class="menu_mm"><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li><hr>
+<li class="menu_mm"><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+</ul>
+</nav>
+</div>
+{% block content %}
+{% endblock%}
+<hr>
+<footer class="footer">
+<div class="container">
+<div class="row footer_row">
+<div class="col">
+<div class="footer_content">
+<div class="row">
+<div class="col-lg-3 footer_col">
+<div class="footer_section footer_about">
+<div class="footer_logo_container">
+<a href="#">
+<div class="footer_logo_text">Mastrooms</div>
+</a>
+</div>
+<div class="footer_about_text">
+<p>Online Renting Solution Platform to ease the overhead of both Tenants and Room Owners. </p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 footer_col">
+<div class="footer_section footer_links">
+<div class="footer_title">About Us</div>
+<div class="footer_links_container">
+<ul>
+<li><a href="{% url 'about_us' %}">About Us</a></li>
+<li><a href="{% url 'terms_and_conditions' %}">Terms &amp; Conditions</a></li>
+<li><a href="{% url 'faq' %}">FAQs</a></li>
+<li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-3 footer_col">
+<div class="footer_section footer_contact">
+<div class="footer_title">Contact Us</div>
+<div class="footer_contact_info">
+<ul>
+<li><a href = "mailto:mail@mastrooms.com" target="_blank"><i class="far fa-envelope" ></i> : mail@mastrooms.com</a><br>
+<a href = "mailto:mastrooms@gmail.com" target="_blank"><i class="far fa-envelope" ></i> : mastrooms@gmail.com</a><br>
+<a href="https://wa.me/+916395288267" target="_blank"><i class="fab fa-whatsapp" ></i> : 6395288267</a> | <a href="https://wa.me/+917985385064"> 7985385064</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-3 footer_col">
+<div class="footer_title">Connect With Us</div>
+<div class="footer_social">
+<ul>
+<li><a href="https://www.facebook.com/mastrooms/" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+<li><a href="https://www.instagram.com/mastrooms/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="https://wa.me/+916395288267" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+<li><a href="https://www.youtube.com/channel/UCwccg85v1XufV-4jjd_9YcA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row copyright_row">
+<div class="col">
+<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+<div class="cr_text">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>  | Mastrooms OPC | Some rights reserved </div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+{% block js%}
+{% endblock %}
+</body>
+</html>

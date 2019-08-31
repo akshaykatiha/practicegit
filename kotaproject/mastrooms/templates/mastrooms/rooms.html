@@ -1,0 +1,162 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title> Rooms | Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/rooms.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/rooms_responsive.css' %}">
+{% endblock %}
+{% block nav %}
+<li><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li class="active"><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{% block content %}
+<div class="home">
+<div class="breadcrumbs_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="breadcrumbs">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li>Search Rooms</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</div>
+<div class="courses">
+<div class="container">
+<div class="row">
+<!--------------------------------------
+<div class="col-lg-4">
+<div class="sidebar">
+<div class="sidebar_section">
+<div class="sidebar_section_title">Filters :</div>
+----------------Filter Queries Will Be Applied Here---------------
+<div class="sidebar_categories">
+<form method="POST" action="" >
+{% csrf_token %}
+<p>CHOOSE :</p>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+<label class="form-check-label" for="defaultCheck1">
+Air Conditioned
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+<label class="form-check-label" for="defaultCheck2">
+Attached Bathroom
+</label>
+</div>
+<hr>
+<p>OCCUPANCY :</p>
+<div class="form-check">
+<label class="form-check-label">
+<input type="radio" class="form-check-input" name="optradio">Single Seater
+</label>
+</div>
+<div class="form-check">
+<label class="form-check-label">
+<input type="radio" class="form-check-input" name="optradio">Double Seater
+</label>
+</div>
+<div class="form-check">
+<label class="form-check-label">
+<input type="radio" class="form-check-input" name="optradio">Dormitory
+</label>
+</div>
+<hr>
+<p>PRICE :</p>
+<br>
+<div class="form-row">
+<div class="col-5">
+<input type="text" class="form-control" placeholder="Min :">
+</div>
+<div class="col-2">
+
+</div>
+<div class="col-5">
+<input type="text" class="form-control" placeholder="Max :">
+</div>
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Sign in</button>
+</form>   
+<br>
+
+<br>
+
+</div>
+</div>
+</div>
+</div>
+---------------------------------------->
+<div class="col-lg-12">
+<div class="courses_search_container">
+<div class="filter_title"><!--Filters--></div>
+</div>
+<div class="courses_container">
+<div class="row courses_row">
+{% for r in room %}
+<!-- Course -->
+<div class="col-lg-4 course_col">
+<div class="course">
+<div class="course_image"><a href="{% url 'rooms' r.id r.name %}" target="_blank">
+<img src="{{ r.image1.url}}" alt="{{r.name}}" height="220px;" width="800px;"></a></div>
+<div class="course_body">
+<div class="course_title"><a href="{% url 'rooms' r.id r.name %}" target="_blank">{{ r.name }}</a></div>
+<div class="course_text">
+<p>{{r.house_number}} in {{ r.address }}</p>
+</div>
+</div>
+<div class="course_footer">
+<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+<div class="course_info">
+<i class="fas fa-rupee-sign"></i>
+<span>{{ r.rent }}</span>
+</div>
+<div class="course_price ml-auto"><i class="fas fa-phone-volume"></i> {{ r.phone_number }}</div>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+<div class="pagination">
+<span class="step-links">
+{% if count.has_previous %}
+<a href="?page=1">&laquo; First</a>
+<a href="?page={{ count.previous_page_number }}">Previous</a>
+{% endif %}
+
+<span class="current">
+Page {{ count.number }} of {{ count.paginator.num_pages }}
+</span>
+
+{% if count.has_next %}
+<a href="?page={{ count.next_page_number }}">Next</a>
+<a href="?page={{ count.paginator.num_pages }}">Last &raquo;</a>
+{% endif %}
+</span>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/js/room_detail.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+{% endblock %}
+
+

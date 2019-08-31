@@ -1,0 +1,147 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title>Instructions | Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link href="{% static 'mastrooms/plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/instructions.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/about_us_responsive.css' %}">
+{% endblock %}
+{% block nav%}
+<li><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{% block menu_nav %}
+<li class="menu_mm"><a href="{% url 'index' %}"></i> Home</a></li><hr id="hr2">
+<li class="menu_mm"><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li><hr id="hr2">
+<li class="menu_mm"><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li><hr id="hr2">
+{% endblock %}
+{% block content%}
+<div class="home">
+<div class="breadcrumbs_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="breadcrumbs">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li>Instructions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</div>
+
+<!-- Course -->
+
+<div class="course">
+<div class="container">
+<div class="row">
+
+<!-- Course -->
+<div class="col-lg-12">
+
+<div class="course_container">
+
+<!-- Course Tabs -->
+<div class="course_tabs_container">
+<div class="tab_panels">
+
+<!-- Description -->
+<div class="tab_panel active">
+<div class="tab_panel_title">Instructions :</div>
+<div class="tab_panel_section">
+<div class="tab_panel_text">
+<p>Please go through the Instructions before sending us detail of your Property. Given below is the detail of the Fields, you have to send us in order to register your property.
+You can send us the detail in writing through whatsapp chat (Click on the Button below to send details on Whatsapp ) or Email us at <a href = "mastrooms@gmail.com" target="_blank"> mastrooms@gmail.com</a>.
+You can also send by writing all the details of your Property on a Paper and send us the photo of the paper.
+<br>All fields with asterisk ( <sup style="color:red">*</sup> ) are compulsary. By sending details, we assume that you have read our Terms &amp; Conditions and Privacy Policy.</p><br>
+</div>
+</div>
+<div style="text-align:center;"><a href="https://wa.me/+916395288267" target="_blank"><button type="button" class="btn btn-outline-danger btn-lg"><i class="fab fa-whatsapp" style="color:red;"></i> Send Details Now</button></a></div>
+<hr>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle"><sup style="color:red">*</sup> Name of your Property :</div>
+<div class="tab_panel_text">
+<p>It is the name of your Building. Example can be : XYZ Boys'/Girls' Hostels / PG , XYZ Sadan / Villa / Nivas etc.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle"><sup style="color:red">*</sup> Address of your Property :</div>
+<div class="tab_panel_text">
+<p>Provide House no/ Plot Number/ Street with Name of the Colony.Example can be : 1011A, XYZ Nagar Ist, XYZ Colony etc.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Landmark :</div>
+<div class="tab_panel_text">
+<p>Famous places near to your Property It will help the Tenants(students) to locate your Property easily. Example can be : Near Allen Sankalp Building or Near PMC Hospital or Near City Mall etc.</p>
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle"><sup style="color:red">*</sup> Contact number :</div>
+<div class="tab_panel_text">
+<p>Provide the contact number, email address (if possible) so that Tenants(students) can contact you directly. If your Hostel have Wardens, then you can give the contact information of your Warden also.(There is no Limit on the contact numbers provided by you, but remember that all the contact detail will be visible at our website.)</p>
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle"><sup style="color:red">*</sup> Category :</div>
+<div class="tab_panel_text">
+<p>Boys'/ Girls Hostel / PG, Family rooms, Flats etc.</p>
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Occupancy:</div>
+<div class="tab_panel_text">
+<p>Single / Double seater. This field is optional. If you will not provide field, we will assume it as Single Seater.</p>
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Amenities:</div>
+<div class="tab_panel_text">
+<p>Amenities are the accessories or belonging to your room. Fill this field precisely as more Amenities means more Tenants(students).Example can be : A.C, Attached Bathroom, Power Backup, Cooler, Water Purifier, Water Cooler, Geyser, Mattress, Pillow, Curtains, Bucket etc.</p>
+</div>
+</div>
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Description:</div>
+<div class="tab_panel_text">
+<p>Tell something about your Rooms. It may be the Cleanliness, Locality around property, Nearby shops etc. Example can be : Room is airy and has an emple space of 15ft X 15ft. Room is at a walking distance from Allen Safalya Building. Room is designed in such a way, that no noise can reach you when you are studying. Our Building has Mess facility with good quality food. Alos, we ran Daily need shop, so that your daily needs are Fullfilled.
+Remember to describe your Building nicely.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+<!-- Curriculum -->
+
+<!-- Reviews -->
+
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Course Sidebar -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/js/room_detail.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,103 @@
+.home
+{
+	width: 100%;
+	height: 182px;
+	background: #f2f4f5;
+	border-bottom: solid 1px #edeff0;
+}
+.breadcrumbs_container
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 13px;
+	padding-left: 3px;
+}
+.breadcrumbs ul li
+{
+    font-size: 14px;
+	display: inline-block;
+	position: relative;
+}
+.breadcrumbs ul li:not(:last-child)::after
+{
+	display: inline-block;
+	font-family: 'Font Awesome 5 Free';
+	content: '/';
+	margin-left: 7px;
+	margin-right: 4px;
+	color: #909090;
+}
+.breadcrumbs ul li a
+{
+	font-size: 14px;
+	color: #909090;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.breadcrumbs ul li a:hover
+{
+	color: red;
+}
+/*********************************
+7. Course
+*********************************/
+.course
+{
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #FFFFFF;
+}
+.course_container
+{
+	width: 100%;
+}
+.tab_panel
+{
+	display: none !important;
+	width: 100%;
+	height: 100%;
+	-webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    border: solid 1px #353535;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.tab_panel.active
+{
+	display: block !important;
+}
+.tab_panel_title
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	color: #353535;
+}
+.tab_panel_text
+{
+	margin-top: 10px;
+}
+.tab_panel_text p
+{
+    font-family: 'Open Sans',sans-serif;
+	font-size: 18px;/*19px*/
+	color: #505050;
+	line-height: 1.75;/*1.75*/
+}
+.tab_panel_section
+{
+	margin-top: 17px;
+}
+.tab_panel_subtitle
+{
+	font-size: 20px;
+	color: #353535;
+}

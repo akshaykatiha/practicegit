@@ -1,0 +1,240 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title>FAQ | Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/register_property.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/terms_and_conditions.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/about_us_responsive.css' %}">
+{% endblock %}
+{% block nav %}
+<li><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{%block content %}
+<!-- *******************************************Breadcrum***********************************************************-->
+<div class="home">
+<div class="breadcrumbs_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="breadcrumbs">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li>Frequently Asked Questions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</div>
+
+<!-- *********************************************Blog1******************************************************* -->
+<div class="blog">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<div class="blog_content">
+<div class="blog_title">Frequently Asked Questions</div>
+<p>Welcome to Mastrooms' Customer Section . All Frequently Asked Questions are answered here. Please search for your
+related query. If your query is not answered here, feel free to mail us at <a href = "mailto:mail@mastrooms.com?">mail@mastrooms.com</a> or <a href = "mailto:mail@mastrooms.com?">mastrooms@gmail.com</a>
+</p><p>You can also reach us at Whatsapp on 
+<a href="https://wa.me/+916395288267">6395288267</a> | <a href="https://wa.me/+917985385064">7985385064</a>
+</p>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/how6.jpg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" ></div>
+</div>
+</div>
+</div>
+</div>
+<!--***********************************************FAQs********************************************************-->
+<div class="container">
+<div clas="row">
+<div class="col-lg-12">
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Owner</a>
+<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Tenant</a>
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<div class="course">
+<div class="container">
+
+<div class="course_container">
+<!-- Course Tabs -->
+<div class="course_tabs_container">
+<div class="tab_panels">
+
+<!-- Description -->
+<div class="tab_panel active">
+
+<div class="tab_panel_section">  
+<div class="tab_panel_subtitle">How can I Register my property ?</div>
+<div class="tab_panel_text">
+<p>You can register at Mastrooms by following the steps explained above or you can watch video from this page.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Who will  verify Tenants?</div>
+<div class="tab_panel_text">
+<p>It is upto you how you are going to verify your tenants. We are not taking any verification responsibility.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Who will take Responsibility of Tenants ?</div>
+<div class="tab_panel_text">
+<p>Mastroom is solely responsible for providing Online Renting Solution. We are not responsible for any fake promises made through the tenants.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">How will I receive my Rent ?</div>
+<div class="tab_panel_text">
+<p>You will receive your rent directly from the Tenant.Mastrooms will not serve as a third party during rent transactions.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">How much I have to pay for your Services ?</div>
+<div class="tab_panel_text">
+<p>Our services are free for early registrations. So, register before the offer ends.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Still have Doubts ?</div>
+<div class="tab_panel_text">
+<p>If you still have any doubt, feel free to drop your queries at <a href = "mailto:mail@mastrooms.com?">mail@mastrooms.com</a> or <a href = "mailto:mail@mastrooms.com?">mastrooms@gmail.com</a></p>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<div class="course">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="course_container">
+<!-- Course Tabs -->
+<div class="course_tabs_container">
+<div class="tab_panels">
+
+<!-- Description -->
+<div class="tab_panel active">
+
+<div class="tab_panel_section">  
+<div class="tab_panel_subtitle">Why choose mastrooms ?</div>
+<div class="tab_panel_text">
+<p>Mastrooms provide thousands of Property at a single place, so no there is no need search for Rooms or Flats manually or by paying to Brokers .</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Should I have to pay any charges for using mastrooms website ?</div>
+<div class="tab_panel_text">
+<p>No,you don't need to pay any fees or charges for using this website.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Can I book rooms on mastrooms ?</div>
+<div class="tab_panel_text">
+<p>Mastrooms provide the details of hostels/residencies/flats.You have to contact with Owners for Room booking. </p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Are these Properties certified ?</div>
+<div class="tab_panel_text">
+<p>Mastrooms is a platform for providing details of Properties. Properties listed on Mastrooms may or may not be certified. You can ask with the Owner of the property for Verification purpose . </p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Is there any Responsibility of Mastrooms ?</div>
+<div class="tab_panel_text">
+<p>Mastrooms will not be responsible for any kind of Fraud or Scam made by Owner. However, we take care that such things never happen in general.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Is the Information provided by Owner is True ?</div>
+<div class="tab_panel_text">
+<p>We don't claim that this Information is purely True, we only display the Information that is provided by the Owner to us. However, we try our best , so that the Information provided by our website is nearly True.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Should I refer these properties with my friends and relatives ?</div>
+<div class="tab_panel_text">
+<p>Of course yes, you can refer your friends and relatives to save their time. It will motivate us to serve us Better. You can also support Mastrooms by Donating us at mastrooms@upi.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">How will I know that my Room is confirmed?</div>
+<div class="tab_panel_text">
+<p>You can contact with the Owner for your Booking confirmation. All the information related to the booking will be provided to you by Owner only.</p>
+</div>
+</div>
+
+<div class="tab_panel_section">
+<div class="tab_panel_subtitle">Still have Doubts ?</div>
+<div class="tab_panel_text">
+<p>If you still have any doubt, feel free to drop your queries at <a href = "mailto:mail@mastrooms.com?">mail@mastrooms.com</a> or <a href = "mailto:mail@mastrooms.com?">mastrooms@gmail.com</a></p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--------------------------------------------------------------->
+<!---->
+<!--************************************************Footer*********************************************-->
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/colorbox/jquery.colorbox-min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'mastrooms/js/room_detail.js' %}"></script>
+{% endblock %}
+
+
+

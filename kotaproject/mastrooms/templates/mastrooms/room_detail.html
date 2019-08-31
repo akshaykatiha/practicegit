@@ -1,0 +1,235 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title>{{ room.name }} | Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/room_detail.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/room_detail_responsive.css' %}">
+{% endblock %}
+{% block nav %}
+<li><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{% block content %}
+<div class="home">
+<div class="breadcrumbs_container">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="breadcrumbs">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'rooms' %}">Rooms</a></li>
+<li>{{ room.name }}</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>			
+</div>
+<!-- Course -->
+<div class="course">
+<div class="container">
+<div class="row">
+<!-- Course -->
+<div class="col-lg-12">
+<div class="course_container">
+<!-- Course Image -->
+<div class="course_image"><img src="{{ room.image2.url }}" alt="{{ room.name }}" height="600px;" width="1920px;"></div>
+<!-- Course Tabs -->
+<div class="course_tabs_container">
+<div class="tabs d-flex flex-row align-items-center justify-content-start">
+<div class="tab active">About</div>
+<div class="tab">Amenities</div>
+<div class="tab">Details</div>
+</div>
+<div class="tab_panels">
+<!------------------------------ABOUT-------------------------------------->
+<div class="tab_panel active">
+<div class="tab_panel_content">
+<div class="tab_panel_section">
+<ul class="tab_panel_bullets">
+<li>Name : {{ room.name }}</li>
+<li>Rent : {{ room.rent }}</li>
+<li>Address : {{ room.house_number }},{{ room.address }}</li>
+<li>Occupancy : {{ room.occupancy }}</li>
+<li>Category : {{ room.category }} </li>
+{% if room.landmark %}
+<li>Landmark : {{ room.landmark }} </li>
+{% endif %}
+</ul>
+</div>
+</div>
+</div>
+<!--------------------------Amenities-------------------------------------->
+<div class="tab_panel tab_panel_2">
+<div class="tab_panel_content">
+<ul class="dropdowns">
+<!--------------------------------Basic Amenities--------------------------->
+<li>
+<div class="dropdown_item">
+<div class="dropdown_item_title">Basic Amenities :</div>
+<div class="dropdown_item_text">
+<div class="container">
+<div class="row">
+{% if room.bed %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/bed.svg' %}" onerror="this.style.display='None'" alt="Bed" style="width:40px;height:40px;">&nbsp;&nbsp;Bed
+</div>
+</div>
+{% endif %}
+{% if room.table %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/table.svg' %}" onerror="this.style.display='None'" alt=" Table and Chair " style="width:40px;height:40px;">&nbsp;&nbsp;Table and Chair
+</div>
+</div>
+{% endif %}
+{% if room.fan %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/fan.svg' %}" onerror="this.style.display='None'" alt=" Fan " style="width:40px;height:40px;">&nbsp;&nbsp;Fan
+</div>
+</div>
+{% endif %}
+{% if room.ro_water %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/ro_water.svg' %}" onerror="this.style.display='None'" alt=" Water Purifier " style="width:40px;height:40px;">&nbsp;&nbsp;Water Purifier
+</div>
+</div>
+{% endif %}
+</div>
+</div>
+</div>
+</div>
+</li>
+<!--------------------------------Extra Amenities--------------------------->
+<li>
+<div class="dropdown_item">
+<div class="dropdown_item_title">Extra Amenities :</div>
+<div class="dropdown_item_text">
+<div class="container">
+<div class="row">
+{% if room.air_conditioner %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/air_conditioner.svg' %}" onerror="this.style.display='None'" alt=" AC " style="width:40px;height:40px;">&nbsp;&nbsp;AC
+</div>
+</div>
+{% endif %}
+{% if room.mess %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/mess.svg' %}" onerror="this.style.display='None'" alt=" Mess " style="width:40px;height:40px;">&nbsp;&nbsp;Mess
+</div>
+</div>
+{% endif %}
+{% if room.power_backup %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/power_backup.svg' %}" onerror="this.style.display='None'" alt=" Power Backup " style="width:40px;height:40px;">&nbsp;&nbsp;Power Backup
+</div>
+</div>
+{% endif %}
+{% if room.cctv %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/cctv.svg' %}" onerror="this.style.display='None'" alt=" CCTV " style="width:40px;height:40px;">&nbsp;&nbsp;CCTV
+</div>
+</div>
+{% endif %}
+{% if room.attached_bathroom %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/attached_bathroom.svg' %}" onerror="this.style.display='None'" alt=" Attached Bathroom " style="width:40px;height:40px;">&nbsp;&nbsp;Attached Bathroom
+</div>
+</div>
+{% endif %}
+{% if room.geyser %}
+<div class="col-lg-3">
+<div class="dropdown_item_text">
+<img src="{% static 'mastrooms/images/geyser.svg' %}" onerror="this.style.display='None'" alt=" Hot Water Geyser " style="width:40px;height:40px;">&nbsp;&nbsp;Hot Water Geyser
+</div>
+</div>
+{% else %}
+<p>Not Available</p>
+{% endif %}
+</div>
+</div>
+</div>
+</div>
+</li>
+<!--------------------------------Other Stuff to consider--------------------------->
+<li>
+<div class="dropdown_item">
+<div class="dropdown_item_title">Others Stuff to consider :</div>
+<div class="dropdown_item_text">
+{% if room.other_amenities %}
+<p>{{ room.other_amenities }}</p>
+{% else %}
+<p>Not Available</p>
+{% endif %}
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-----------------------Description------------------------------------>
+<div class="tab_panel tab_panel_2">
+<div class="tab_panel_content">
+<ul class="dropdowns">
+{% if room.other_contact_number %}
+<li>
+<div class="dropdown_item">
+<div class="dropdown_item_title">Description :</div>
+<div class="dropdown_item_text">
+<p>{{ room.description }}</p>
+</div>
+</div>
+</li>
+{% else %}
+<div class="dropdown_item_text">
+<p>Not Available</p>
+</div>
+{% endif %}
+{% if room.other_contact_number %}
+<li>
+<div class="dropdown_item">
+<div class="dropdown_item_title">Others Contact Info :</div>
+<div class="dropdown_item_text">
+<p>{{ room.other_contact_number }}</p>
+</div>
+</div>
+</li>
+{% endif %}
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Course Sidebar -->
+</div>
+</div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/js/room_detail.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/parallax-js-master/parallax.min.js '%}"></script>
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/colorbox/jquery.colorbox-min.js '%}"></script>
+{% endblock %}

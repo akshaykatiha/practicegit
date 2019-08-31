@@ -1,0 +1,219 @@
+{% extends 'mastrooms/base.html' %}
+{% load static %}
+{% block title %}
+<title>Mastrooms | Hostels in Kota | Rooms in Kota | Kota Hostels</title>
+{% endblock %}
+{% block css %}
+<link  rel="stylesheet" type="text/css" href="{% static 'mastrooms/plugins/colorbox/colorbox.css' %}" />
+<link  rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/index.css' %}" />
+<link  rel="stylesheet" type="text/css" href="{% static 'mastrooms/css/index_responsive.css' %}" />
+{% endblock %}
+{% block nav%}
+<li><a href="{% url 'register_property' %}"><i class="fas fa-home"></i> Register Property</a></li>
+<li><a href="{% url 'rooms' %}"><i class="fas fa-search"></i> Search Rooms</a></li>
+<li><a href="{% url 'about_us' %}"><i class="fas fa-bullhorn"></i> About Us</a></li>
+{% endblock %}
+{% block content%}
+<div class="home">
+<div class="home_slider_container">
+<div class="home_slider_background" style="background-image:url('static/mastrooms/images/index_search.jpg')"></div>
+<div class="home_slider_content">
+<div class="container">
+<div class="row">
+<div class="col text-center">
+<div class="home_slider_title">Your Search Ends Here</div>
+<!--------------------------------------------------------------------------------------
+<div class="home_slider_form_container">
+<form method="POST" action="{% url 'rooms' %}" id="home_search_form_1" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
+{% csrf_token %}
+<div class="d-flex flex-row align-items-center justify-content-start">
+<select name ="category" class="dropdown_item_select home_search_input" disabled>
+<option>Search Room Here</option>
+<option>Boys' Hostel</option>
+<option>Boys' P.G.</option>
+<option>Girls' Hostel</option>
+<option>Girls' P.G.</option>
+<option>Family Rooms</option>
+<option>Flats</option>
+</select>
+<select name = "address" class="dropdown_item_select home_search_input1" disabled>
+<option>This Feature will be available soon</option>
+<option>Army Area</option>
+<option>AnantPura</option>
+<option>Bajrang Nagar</option>
+<option>Borkhera</option>
+<option>Bhimganj</option>
+<option>Chawani</option>
+<option>Dadawadi</option>
+<option>Dhanmandi</option>
+<option>Ganesh Nagar</option>
+<option>Girdharpura</option>
+<option>Gordhanpura</option>
+<option>Gumanpura</option>
+<option>Indra Vihar</option>
+<option>JK Colony</option>
+<option>Keshav Pura</option>
+<option>Kunhari</option>
+<option>Mahavir Nagar Ist</option>
+<option>Mahavir Nagar IInd</option>
+<option>Mahavir Nagar IIIrd</option>
+<option>Mokhapura</option>
+<option>NayaPura</option>
+<option>Narcotics Colony</option>
+<option>Rajeev Gandhi Nagar</option>
+<option>Old Rajeev Gandhi Nagar</option>
+<option>Parijat Colony</option>
+<option>Poonam Colony</option>
+<option>Prem Nagar</option>
+<option>Ramganj Mandi</option>
+<option>Rampura</option>
+<option>Rangbari</option>
+<option>R.K Puram</option>
+<option>Sanjay Nagar</option>
+<option>Shivpura</option>
+<option>Subhash Nagar</option>
+<option>Srinath Puram</option>
+<option>Swami Vivekanand Nagar</option>
+<option>Talwandi</option>
+<option>Transport Nagar</option>
+<option>Vigyan Nagar</option>
+</select>
+</div>
+<button type="submit" class="home_search_button" disabled>Available Soon</button>
+</form>
+-------------------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="features">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="section_title_container text-center">
+<h2 class="section_title">Welcome To Mastrooms</h2>
+<div class="section_subtitle"><p>New City ? No Problem... It's time for Mastrooms</p></div>
+</div>
+</div>
+</div>
+<div class="row features_row">
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/no_broker.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Forget Brokers</h3>
+<div class="feature_text"><p>Search your Room Online, say No! to Brokers</p></div>
+</div>
+</div>
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/index_1000+_options.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">1000+ Options</h3>
+<div class="feature_text"><p>Compare from thousands of Rooms Available</p></div>
+</div>
+</div>
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/index_lowest_price_guaranteed.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Best Price Guaranteed</h3>
+<div class="feature_text"><p>Choose Ideal Room from Best Price Segment</p></div>
+</div>
+</div>
+<div class="col-lg-3 feature_col">
+<div class="feature text-center trans_400">
+<div class="feature_icon"><img src="{% static 'mastrooms/images/index_distance_from_coaching.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:100px;height:70px;"/></div>
+<h3 class="feature_title">Distance from Coaching</h3>
+<div class="feature_text"><p>Choose Rooms near your Coaching</p></div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="blog">
+<div class="container">
+<div class="row">
+
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/index_hostel.jpg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"></div>
+</div>
+
+<div class="col-lg-6">
+<div class="blog_content">
+<div class="blog_title">Let's Guide you to your room.</div>
+<p>Mastrooms is dedicated towards bringing comfort in the life of Room and Flat hunting people, using the power of Technology and Internet.
+Forgot all the old methods to search Rooms and Flats.</p>
+<p>Mastrooms is an Innovative step to solve the problem which is faced by almost every Room and Flat Hunters in almost every city. Mastrooms is built using latest technology to deliver better and more efficient operations, management and services to our customers. We are dedicated to find you a Home away from Home.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="blog">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<div class="blog_content">
+<div class="blog_title">With us, comfort has an address.</div>
+<p>Yes, you heard it right. We give you the address of the comfort . With us, Room Hunting is just a Cake Walk . Find your place of comfort within seconds . Search from the thousands of options available for you on a single click .</p>
+<p>We heartly Thank you for choosing our services . Have a great stay with us.If you need any assistence, feel free to connect with us at : <a href = "mailto:mail@mastrooms.com?">mail@mastrooms.com</a> or <a href = "mailto:mail@mastrooms.com?">mastrooms@gmail.com</a>.</p>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="blog_image"><img src="{% static 'mastrooms/images/index_room_image.jpeg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)"></div>
+</div>
+</div>
+</div>
+</div>
+<!----------------------------------------------------------------------------------------->
+<div class="counter">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="counter_content">
+<div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+<div class="milestone">
+<img src="{% static 'mastrooms/images/index_milestone_bed.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:90px;height:90px;"><br>
+<div class="milestone_counter" data-end-value="1200" data-sign-after="+">0+</div>
+<div class="milestone_text">Rooms</div>
+</div>
+<div class="milestone">
+<img src="{% static 'mastrooms/images/index_milestone_house.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:90px;height:90px;">
+<div class="milestone_counter" data-end-value="35" data-sign-after="+">0+</div>
+<div class="milestone_text">PGs</div>
+</div>
+<div class="milestone">
+<img src="{% static 'mastrooms/images/index_milestone_hostel.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:80px;height:80px;">
+<div class="milestone_counter" data-end-value="80" data-sign-after="+">0+</div>
+<div class="milestone_text">Hostels</div>
+</div>
+<div class="milestone">
+<img src="{% static 'mastrooms/images/index_milestone_click.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:90px;height:90px;">
+<div class="milestone_counter" data-end-value="200" data-sign-after="+">0+</div>
+<div class="milestone_text">Visits per day</div>
+</div>
+<div class="milestone">
+<img src="{% static 'mastrooms/images/index_milestone_happy_tenant.svg' %}" onerror="this.style.display='None'" alt="This image is shy in nature :)" style="width:90px;height:90px;">
+<div class="milestone_counter" data-end-value="300" data-sign-after="+">0+</div>
+<div class="milestone_text">Happy Tenants</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--------------------------------------------------------------------->
+{% endblock %}
+{% block js %}
+<script src="{% static 'mastrooms/plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'mastrooms/js/index.js' %}"></script>
+<script src="{% static 'mastrooms/plugins/parallax-js-master/parallax.min.js' %}"></script>
+{% endblock %}

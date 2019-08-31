@@ -1,0 +1,223 @@
+.home
+{
+	width: 100%;
+	height: 182px;
+	background: #f2f4f5;
+	border-bottom: solid 1px #edeff0;
+}
+.breadcrumbs_container
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 13px;
+	padding-left: 3px;
+}
+.breadcrumbs ul li
+{
+    font-size: 14px;
+	display: inline-block;
+	position: relative;
+}
+.breadcrumbs ul li:not(:last-child)::after
+{
+	display: inline-block;
+	font-family: 'Font Awesome 5 Free';
+	content: '/';
+	margin-left: 7px;
+	margin-right: 4px;
+	color: #707070;
+}
+.breadcrumbs ul li a
+{
+	font-size: 14px;
+	font-weight: 400;
+	color: #707070;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.breadcrumbs ul li a:hover
+{
+	color: red;
+}
+
+/*********************************
+7. Course
+*********************************/
+
+.course
+{
+	width: 100%;
+	padding-top: 57px;
+	padding-bottom: 100px;
+	background: #FFFFFF;
+}
+.course_container
+{
+	width: 100%;
+}
+.course_image
+{
+	margin-top: 21px;
+	width: 100%;
+}
+.course_image img
+{
+	max-width: 100%;
+}
+.course_tabs_container
+{
+	width: 100%;
+	margin-top: 30px;
+}
+.tab
+{
+	font-family: 'Open Sans', sans-serif;
+	height: 40px;
+	background: #f2f4f5;
+	font-size: 18px;
+	color: #353535;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-right: 10px;
+	padding-left: 21px;
+	padding-right: 20px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.tab.active,
+.tab:hover
+{
+	background: red;
+	color: #FFFFFF;
+}
+.tab_panel
+{
+	display: none !important;
+	width: 100%;
+	height: 100%;
+	-webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    border: solid 1px #ebebeb;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.tab_panel.active
+{
+	display: block !important;
+}
+
+.tab_panel_text
+{
+	margin-top: 10px;
+}
+.tab_panel_section
+{
+	margin-top: 17px;
+}
+.tab_panel_bullets
+{
+	margin-top: 9px;
+}
+.tab_panel_bullets li
+{
+	position: relative;
+	padding-left: 27px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.75;
+	color: #353535;
+}
+.tab_panel_bullets li:not(:last-child)
+{
+	margin-bottom: 2px;
+}
+.tab_panel_bullets li::before
+{
+	display: block;
+	position: absolute;
+	top: 9px;
+	left: 1px;
+	width: 7px;
+	height: 7px;
+	background: #353535;
+	content: '';
+	border-radius: 50%;
+}
+
+.tab_panel_2
+{
+    padding-bottom: 10px;
+}
+.dropdowns
+{
+	margin-top: 17px;
+}
+.dropdowns li ul
+{
+	max-height: 0;
+	padding-left: 30px;
+	overflow: hidden;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.dropdowns li
+{
+	position: relative;
+}
+.dropdowns li.has_children > .dropdown_item
+{
+	cursor: pointer;
+}
+.dropdown_item
+{
+	padding-top: 26px;
+	padding-bottom: 25px;
+}
+.dropdowns li:not(:last-child) .dropdown_item
+{
+	border-bottom: solid 1px #e5e5e5;
+}
+.dropdown_item_title
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	color: #101010;
+}
+
+.dropdown_item_text
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.dropdown_item_text p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #505050;
+	line-height: 1.75;
+}
