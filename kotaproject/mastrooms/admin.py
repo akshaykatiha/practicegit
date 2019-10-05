@@ -3,7 +3,8 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
-from .models import User, Owner, Room, Tenant
+from customauth.models import User
+from .models import User, Vendor, Customer, Service, SubService, VendorService, VendorCustomer, Otp
 # admin.site.register()
 
 
@@ -47,12 +48,12 @@ class UserChangeForm(forms.ModelForm):
 class UserAdmin(BaseUserAdmin):
     form = UserChangeForm
     add_form = UserCreationForm
-    list_display = ('phone','is_admin','is_owner','is_tenant')#''
-    list_filter = ('is_admin','is_owner','is_tenant')#'is_owner','is_tenant'
+    list_display = ('phone','is_admin','is_owner','is_tenant')
+    list_filter = ('is_admin','is_vendor','is_customer')
     fieldsets = (
         ('Login Details', {'fields': ('phone', 'password')}),
         ('Personal Details',{'fields': ('name','email')}),
-        ('Permissions', {'fields': ('is_admin','is_owner','is_tenant')}),#is_owner','is_tenant
+        ('Permissions', {'fields': ('is_admin','is_vendor','is_cutomer')}),#is_owner','is_tenant
     )
     add_fieldsets = (
         (None, {
@@ -65,6 +66,10 @@ class UserAdmin(BaseUserAdmin):
     filter_horizontal = ()
 
 admin.site.register(User, UserAdmin)
-admin.site.register(Owner)
-admin.site.register(Room)
-admin.site.register(Tenant)
+admin.site.register(Vendor)
+admin.site.register(Customer)
+admin.site.register(Service)
+admin.site.register(SubService)
+admin.site.register(VendorService)
+admin.site.register(VendorCustomer)
+admin.site.register(Otp)
