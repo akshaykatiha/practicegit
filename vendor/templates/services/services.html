@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+Services
+{% endblock %}
+{% block content %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h5 class="display-4">Services we offer</h5>
+            <p</p>
+    </div>
+    <div class="container">
+        <div class="row">
+                {% for item in service %}
+            <div class="col-md-4">
+                    <a class="p-2 text-dark" href="{% url 'services' item.id item.service_name %}" style="text-decoration: none">
+                <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ item.service_name }}</h5>
+                          <p class="card-text">Base charge : {{item.service_charge}} + Tax</p>
+                        </div>
+                </div>
+                    </a>
+            </div>
+                {% endfor %}
+        </div>
+        <div class="pagination">
+                <span class="step-links">
+                {% if count.has_previous %}
+                <a href="?page=1">&laquo; First</a>
+                <a href="?page={{ count.previous_page_number }}">Previous</a>
+                {% endif %}
+                
+                <span class="current">
+                Page {{ count.number }} of {{ count.paginator.num_pages }}
+                </span>
+                
+                {% if count.has_next %}
+                <a href="?page={{ count.next_page_number }}">Next</a>
+                <a href="?page={{ count.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
+                </span>
+        </div>
+    </div>
+{% endblock %}
