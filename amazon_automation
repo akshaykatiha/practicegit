@@ -1,0 +1,43 @@
+'Opening Chrome
+SystemUtil.Run "chrome.exe","https://amazon.in"
+
+'Clicking on Signin Button
+	Browser("Online Shopping site in").Page("Online Shopping site in").WebElement("Account & Lists").Click
+	wait 3
+	Browser("Online Shopping site in").Page("Online Shopping site in").WebElement("Sign in").Click
+	
+	'Entering Mobile Number for Signup
+	Browser("Online Shopping site in").Page("Amazon Sign In").WebEdit("email").Set("username")
+	wait 1
+	Browser("Online Shopping site in").Page("Amazon Sign In").WebButton("Continue").Click
+	wait 3
+	
+	'Entering Password for Signup
+	Browser("Online Shopping site in").Page("Amazon Sign In").WebEdit("password").Set("password")
+	wait 1
+	Browser("Online Shopping site in").Page("Amazon Sign In").WebButton("Continue").Click
+	wait 5
+
+
+'Clicking on All DropDown Menu
+	Browser("Online Shopping site in").Page("Online Shopping site in").WebList("url").Select("Baby")
+	wait 1
+	Browser("Online Shopping site in").Page("Online Shopping site in").WebButton("Go").Click
+	wait 5
+
+'Verifying that BACK TO TOP has appeared for successful load of page
+If Browser("Online Shopping site in").Page("Up to 70% off on Baby").WebElement("Back to top").Exist(10) Then
+	msgBox "Page Loaded Successfully"
+Else
+	msgBox "Page loading was unsuccessful"
+End If
+
+'Logging out before closing browser
+Browser("Online Shopping site in").Page("Online Shopping site in").WebElement("Account & Lists").Click
+wait 3
+Browser("Online Shopping site in").Page("Your Amazon.in").WebElement("Sign Out").Click
+wait 2
+
+
+'Closing Chrome Application opened during UFT debugging
+SystemUtil.CloseProcessByName "chrome.exe"
