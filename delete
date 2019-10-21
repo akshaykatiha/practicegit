@@ -1,0 +1,26 @@
+Option Explicit
+Dim strText,objPage,childobject
+strText = ""
+
+'Opening Chrome
+SystemUtil.Run "chrome.exe"
+
+'Clicking on New Tab
+If UIAObject("PAL Home - Google Chrome").UIATab("Tab").UIAButton("New Tab").UIAObject("Pane").Exist Then
+	UIAObject("PAL Home - Google Chrome").UIATab("Tab").UIAButton("New Tab").UIAObject("Pane").Click
+	wait 3
+End If
+
+' Typing  UFT in Search Bar and Hitting Enter using Type() Method in UFT
+	UIAObject("New Tab - Google Chrome").UIAObject("Pane").Type "UFT" + micReturn
+	wait 3
+
+'Reading the text displayed under the first Link
+Set objPage = Browser("UFT").Page("UFT").Object.body.innertext
+Set childobject = Description.Create()
+childobject("micclass").Value = "WebElement"
+childobject("Visible").Value = True
+Set strText = objPage.ChildObjects(childobject)
+
+'Displaying the text under the first link
+msgBox strText
